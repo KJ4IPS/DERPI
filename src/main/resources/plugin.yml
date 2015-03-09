@@ -1,0 +1,27 @@
+name: DERPI
+version: 0.0.1a
+
+main: com.gamealition.bukkit.derpi.DERPIPlugin
+
+database: true
+
+depend: [Vault]
+
+commands:
+  quarry:
+    permission: derpi.quarry
+  quarryinfo:
+    permission: derpi.quarryinfo
+  quarrylog:
+    permission: derpi.quarrylog
+  unquarry:
+    permission: derpi.unquarry
+
+permissions:
+  derpi.admin:
+    default: op
+    children:
+      derpi.quarry: true
+      derpi.quarryinfo: true
+      derpi.quarrylog: true
+      derpi.unquarry: true
