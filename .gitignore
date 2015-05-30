@@ -1,0 +1,12 @@
+build/
+
+deps/
+
+.gradle/
+
+Bukkit/
+
+out/
+*.iml
+*.ipr
+*.iws

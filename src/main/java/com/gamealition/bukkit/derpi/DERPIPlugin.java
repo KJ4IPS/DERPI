@@ -1,6 +1,7 @@
 package com.gamealition.bukkit.derpi;
 
 import com.gamealition.bukkit.derpi.commands.CommandQuarry;
+import com.gamealition.bukkit.derpi.commands.CommandQuarryInfo;
 import com.gamealition.bukkit.derpi.commands.CommandUnquarry;
 import com.gamealition.bukkit.derpi.listeners.*;
 import com.gamealition.bukkit.derpi.tasks.DerpiWatchdog;
@@ -36,6 +37,7 @@ public class DERPIPlugin extends JavaPlugin {
         }
         new CommandQuarry().registerCommand(this,this.getCommand("quarry"));
         new CommandUnquarry().registerCommand(this,this.getCommand("unquarry"));
+        new CommandQuarryInfo().registerCommand(this,this.getCommand("quarryinfo"));
 
         //register the DERPI-derp prevention hooks
         getServer().getPluginManager().registerEvents(new LoginListener(),this);
